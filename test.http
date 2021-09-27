@@ -1,0 +1,23 @@
+### GET example.com
+
+# GET https://example.com/
+
+# ### GET Jsonplaceholder
+# GET https://jsonplaceholder.typicode.com/posts/1/comments
+
+# ###POST 
+# POST https://jsonplaceholder.typicode.com/posts 
+# Content-Type: application/json 
+# {
+#     "title": "New Posttt",
+#     "body" : "This is my new Post"
+# }
+
+# ###PUT  
+# PUT https://jsonplaceholder.typicode.com/posts/1
+
+# ###DELETE 
+# DELETE https://jsonplaceholder.typicode.com/posts/2
+
+### Get 
+GET http://www.myrestaurant.com/dishes/1223
