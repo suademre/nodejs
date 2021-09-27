@@ -1,15 +1,33 @@
-console.log('Hello World!')
+const express = require('express')
+const app = express()
 
-const http = require('http')
+const port = 3000
 
-const port = process.env.PORT || 3000
+app.use(express.json())
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader('Content-Type', 'application/json')
-  res.end('<h1>Hellooo</h1>')
+app.get('/api/cards', (req, res) => {
+  res.set('Content-Type', 'text/html; charset=utf-8')
+  res.send('<h1>Hello World! Wie Läuft</h1>')
+  /* res.send('<h1>Hello World!</h1>') */
 })
 
-server.listen(port, () => {
-  console.log(`es funktioniert im port ${port}`)
+app.post('/api/cards', (req, res) => {
+  console.log(req.body)
+  res.send('This is post request')
+})
+
+app.put('/api/cards', (req, res) => {
+  res.send('This is the put request')
+})
+
+app.patch('/api/cards', (req, res) => {
+  res.send('This is the patch request')
+})
+
+app.delete('/api/cards', (req, res) => {
+  res.send('This is the delete request')
+})
+
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`)
 })

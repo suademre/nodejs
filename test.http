@@ -1,23 +1,30 @@
-### GET example.com
+### GET 
+GET http://localhost:3000/api/cards
 
-# GET https://example.com/
+### POST
+POST http://localhost:3000/api/cards
+Content-Type: application/json
 
-# ### GET Jsonplaceholder
-# GET https://jsonplaceholder.typicode.com/posts/1/comments
+{
+    "text": "What is Node.js?"
+}
 
-# ###POST 
-# POST https://jsonplaceholder.typicode.com/posts 
-# Content-Type: application/json 
-# {
-#     "title": "New Posttt",
-#     "body" : "This is my new Post"
-# }
+### PUT
+PUT http://localhost:3000/api/cards
+Content-Type: application/json
 
-# ###PUT  
-# PUT https://jsonplaceholder.typicode.com/posts/1
+{
+    "text": "This is a post request"
+}
 
-# ###DELETE 
-# DELETE https://jsonplaceholder.typicode.com/posts/2
+### PATCH
+PATCH http://localhost:3000/api/cards
+Content-Type: application/json
 
-### Get 
-GET http://www.myrestaurant.com/dishes/1223
+{
+    "text": "This is a post request"
+}
+
+### DELETE
+DELETE  http://localhost:3000/api/cards
+
