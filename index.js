@@ -5,28 +5,31 @@ const port = 3000
 
 app.use(express.json())
 
-app.get('/api/cards', (req, res) => {
-  res.set('Content-Type', 'text/html; charset=utf-8')
-  res.send('<h1>Hello World! Wie Läuft</h1>')
-  /* res.send('<h1>Hello World!</h1>') */
-})
+app.use('/api/cards', require('./routes/cards'))
 
-app.post('/api/cards', (req, res) => {
-  console.log(req.body)
-  res.send('This is post request')
-})
+// app.get('/api/cards', (req, res) => {
+//   res.set('Content-Type', 'text/html; charset=utf-8')
+//   res.send('<h1>Hello World! Wie Läuft</h1>')
+//   /* res.send('<h1>Hello World!</h1>') */
+// })
 
-app.put('/api/cards', (req, res) => {
-  res.send('This is the put request')
-})
+// app.post('/api/cards', (req, res) => {
+//   console.log(req.body)
+//   const { text } = request.body
+//   res.send(text)
+// })
 
-app.patch('/api/cards', (req, res) => {
-  res.send('This is the patch request')
-})
+// app.put('/api/cards', (req, res) => {
+//   res.send('This is the put request')
+// })
 
-app.delete('/api/cards', (req, res) => {
-  res.send('This is the delete request')
-})
+// app.patch('/api/cards', (req, res) => {
+//   res.send('This is the patch request')
+// })
+
+// app.delete('/api/cards', (req, res) => {
+//   res.send('This is the delete request')
+// })
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)
