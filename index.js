@@ -7,20 +7,23 @@ app.use(express.json())
 
 app.get('/api/cards', (req, res) => {
   res.set('Content-Type', 'text/html; charset=utf-8')
+  console.log(req.body)
   res.send('<h1>Hello World! Wie Läuft</h1>')
   /* res.send('<h1>Hello World!</h1>') */
 })
 
 app.post('/api/cards', (req, res) => {
-  console.log(req.body)
-  res.send('This is post request')
+  console.log(req.body.text)
+  res.send(req.body.text)
 })
 
 app.put('/api/cards', (req, res) => {
-  res.send('This is the put request')
+  console.log(req.body)
+  res.send(req.body)
 })
 
 app.patch('/api/cards', (req, res) => {
+  console.log(req.body)
   res.send('This is the patch request')
 })
 

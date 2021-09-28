@@ -6,7 +6,7 @@ POST http://localhost:3000/api/cards
 Content-Type: application/json
 
 {
-    "text": "What is Node.js?"
+    "text": "This is Post request"
 }
 
 ### PUT
@@ -14,7 +14,7 @@ PUT http://localhost:3000/api/cards
 Content-Type: application/json
 
 {
-    "text": "This is a post request"
+    "text": "This is a Put request"
 }
 
 ### PATCH
@@ -22,7 +22,7 @@ PATCH http://localhost:3000/api/cards
 Content-Type: application/json
 
 {
-    "text": "This is a post request"
+    "text": "This is a Petch request"
 }
 
 ### DELETE
