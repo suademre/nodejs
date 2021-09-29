@@ -43,15 +43,19 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const { text, author } = req.body // { text: "What is node?", author: "Max M." }
+  if (text === '' || author === '') {
+    const error = { message: 'Information missing.' }
+    return res.status(404).json(error) // Bad Request
+  }
 
-  Card.create({ text: text, author: author })
-    .then(data => res.status(200).json(data))
-    .catch(error => res.status(404).json(error))
+  const newCard = { text, author }
+  Card.create(newCard).then(data => res.status(200).json(data))
+  //   .catch(error => res.status(404).json(error))
 
-  // if (text === '' || author === '') {
-  //   const error = { message: 'Information missing.' }
-  //   return res.status(404).json(error) // Bad Request
-  // }
+  //2.variante
+  // Card.create({ text: text, author: author })
+  //   .then(data => res.status(200).json(data))
+  //   .catch(error => res.status(404).json(error))
 
   // const newCard = { text, author, id: nanoid() } // { text: text, author: author, id: nanoid() }
   // cards = [...cards, newCard]
