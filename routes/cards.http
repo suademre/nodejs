@@ -2,32 +2,34 @@
 GET http://localhost:3000/api/cards
 
 ###GET 
-GET http://localhost:3000/api/cards/123
+GET http://localhost:3000/api/cards/61543c45f693f0c55bd4fc97
 
 ### POST
-POST http://localhost:3000/api/cards/564
+POST http://localhost:3000/api/cards
 Content-Type: application/json
 
 {
-    "text": "What is Node.js?"
+   "text": "What is Vue.js?",
+    "author": "Max"
 }
 
 ### PUT
-PUT http://localhost:3000/api/cards/46
+PUT http://localhost:3000/api/cards/61543c45f693f0c55bd4fc97
 Content-Type: application/json
 
 {
-    "text": "This is a post request"
+    "text": "What is MongoDBBB?",
+    "author": "John Doeee"
 }
 
 ### PATCH
-PATCH http://localhost:3000/api/cards/46
+PATCH http://localhost:3000/api/cards/61543c45f693f0c55bd4fc97
 Content-Type: application/json
 
 {
-    "text": "This is a post request"
+    "text": "This is a post requestttt"
 }
 
 ### DELETE
-DELETE  http://localhost:3000/api/cards/654
+DELETE  http://localhost:3000/api/cards/61546170f693f0c55bd4fc98
 
